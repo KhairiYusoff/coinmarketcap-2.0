@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Search from '../assets/svg/search'
 import { ConnectButton } from 'web3uikit'
 import { useContext } from 'react'
-import { CoinMarketContext } from '../context/context'
+
 
 const styles = {
     navLink: `text-white flex mx-[10px]`,
@@ -17,7 +17,7 @@ const styles = {
 }
 
 const Header = () => {
-    const { getQuote } = useContext(CoinMarketContext)
+
     return (
         <div className={styles.header}>
             <Image
@@ -34,7 +34,7 @@ const Header = () => {
                         <div className={styles.badge} />
                     </div>
 
-                    <div className={styles.navItem} onClick={getQuote}>
+                    <div className={styles.navItem} >
                         <div className={styles.navLink}>Exchanges</div>
                     </div>
 
